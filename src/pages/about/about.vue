@@ -8,15 +8,14 @@
 <script setup>
 import { ref } from 'vue'
 import Taro from '@tarojs/taro'
+import './about.scss'
 
-import './index.scss'
-
-const msg = ref('首页')
+const msg = ref('关于')
 const handleLink = () => {
   console.log('跳转')
 
   Taro.navigateTo({
-    url: '/pages/about/about',
+    url: '/pages/index/index',
   })
 }
 </script>
