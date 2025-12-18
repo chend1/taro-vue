@@ -1,17 +1,19 @@
 <template>
   <view class="index">
-    <Counter />
+    <text>{{ msg }}</text>
   </view>
 </template>
 
 <script>
+import { ref } from 'vue'
 import './index.scss'
-import Counter from '../../components/Counter.vue'
 
 export default {
-  name: 'Index',
-  components: {
-    Counter
+  setup () {
+    const msg = ref('Hello world')
+    return {
+      msg
+    }
   }
 }
 </script>
